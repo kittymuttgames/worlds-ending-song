@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kittymutt Games - World's Ending Song</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sketchbook-bg">
+    <div class="main-container">
+
+        <header class="page-header">
+            <img src="title_logo.png" alt="World's Ending Song Title Logo" class="title-image">
+            
+            <p class="page-subtitle">bla bla  bla bla bla bla lalaalala lallala lallalalalalallalalalalallalallalalalalalaalaalalaaalalalalalalalalalaa.</p>
+            
+            <div class="separator"></div>
+        </header>
+
+        <section class="trailer-section">
+            <h2 class="section-title">TRAILER</h2>
+            <div class="media-box dashed-border">
+                <div class="video-placeholder">
+                    <video src="your_trailer.mp4" controls poster="trailer_poster.jpg" class="media-element">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section class="gallery-section">
+            <h2 class="section-title">GALLERY</h2>
+            <div class="gallery-wrapper">
+                
+                <button class="arrow-button left-arrow" aria-label="Previous Image" onclick="scrollGallery(-1)">&lt;</button>
+                
+                <div class="gallery-container" id="galleryContainer">
+                    
+                    <div class="gallery-item dashed-border"><img src="screencap_1.jpg" alt="Game Screenshot 1" class="media-element"></div>
+                    <div class="gallery-item dashed-border"><img src="screencap_2.jpg" alt="Game Screenshot 2" class="media-element"></div>
+                    <div class="gallery-item dashed-border"><img src="screencap_3.jpg" alt="Game Screenshot 3" class="media-element"></div>
+                    <div class="gallery-item dashed-border"><img src="screencap_4.jpg" alt="Game Screenshot 4" class="media-element"></div>
+                    <div class="gallery-item dashed-border"><img src="screencap_5.jpg" alt="Game Screenshot 5" class="media-element"></div>
+
+                </div>
+                
+                <button class="arrow-button right-arrow" aria-label="Next Image" onclick="scrollGallery(1)">&gt;</button>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <h2 class="section-title">DOWNLOAD NOW!</h2>
+            <div class="download-flex">
+                <div class="character-art dashed-border">
+                    <img src="character_art.png" alt="Main Character Art" class="media-element">
+                </div>
+
+                <div class="download-options">
+                    <a href="your_demo_file.exe" download class="download-button dashed-border">DOWNLOAD DEMO</a>
+                    <a href="https://yourusername.itch.io/yourgame" target="_blank" class="download-button dashed-border">ITCH.IO</a>
+                </div>
+            </div>
+
+            <div class="system-support">
+                <h3 class="section-title">SYSTEM SUPPORT</h3>
+                <p>Windows</p>
+                <p class="requirements">Requirements: Potato</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">
+                <img src="footer_logo.png" alt="Kittymutt Games Logo" class="footer-image">
+            </div>
+            <p class="copyright">KITTYMUTT GAMES 2025-2026</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function scrollGallery(direction) {
+            const container = document.getElementById('galleryContainer');
+            const itemWidth = container.querySelector('.gallery-item').offsetWidth;
+            const scrollDistance = itemWidth + 10; 
+            
+            container.scrollBy({
+                left: direction * scrollDistance,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
